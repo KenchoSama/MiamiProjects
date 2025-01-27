@@ -1,147 +1,97 @@
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import React from "react";
 
-import githubIcon from "../assets/img/ELEV_1.jpg";
-import pythonIcon from "../assets/img/ELEV_2.jpg";
-import sqliteIcon from "../assets/img/ELEV_3.jpg";
-import godotIcon from "../assets/img/ELEV_4.jpg";
-import reactIcon from "../assets/img/ELEV_5.jpg";
-import nodejsIcon from "../assets/img/ELEV_6.jpg";
-import cppIcon from "../assets/img/V08.jpg";
-import cssIcon from "../assets/img/V09.jpg";
-import tensorFlowIcon from "../assets/img/V10.jpg";
-import CenterImage from "./CenterImage"; // Import the CenterImage component
-
-export const Skills = () => {
-  const skills = [
-    { img: githubIcon, description: "Project 1: A GitHub visualization tool." },
-    { img: pythonIcon, description: "Project 2: A Python-based web scraper." },
-    { img: sqliteIcon, description: "Project 3: SQLite database manager." },
-    { img: godotIcon, description: "Project 4: A 2D game built with Godot." },
-    { img: reactIcon, description: "Project 5: A portfolio site built with React." },
-    { img: nodejsIcon, description: "Project 6: A Node.js REST API." },
-    { img: cppIcon, description: "Project 7: A C++ graphics engine." },
-    { img: cssIcon, description: "Project 8: Advanced CSS animations." },
-    { img: tensorFlowIcon, description: "Project 9: Machine learning with TensorFlow." },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0); // Track active slide
-
+const Skills = () => {
   return (
-    <section
-      id="skills"
-      className="skills-section bg-white flex flex-col justify-center items-center py-16 px-6 relative"
-    >
+    <section className="skills bg-gray-50 py-16 px-6">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-extrabold text-gray-900">Skills & Experience</h2>
+        </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Work Experience */}
+          <div className="work-experience">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              Work Experience
+            </h3>
+            <ul className="space-y-4 text-gray-700">
+              <li>
+                <div className="font-bold text-lg">Architectural Designer</div>
+                <div>2023 – Present</div>
+                <div>Arquitectonica, Miami, FL</div>
+              </li>
+              <li>
+                <div className="font-bold text-lg">Architectural Drafter</div>
+                <div>2021 – 2022</div>
+                <div>Miami Store Front Windows & Custom Marine Construction, Miami, FL</div>
+              </li>
+              <li>
+                <div className="font-bold text-lg">Architectural Drafter</div>
+                <div>2020 – 2021</div>
+                <div>Bravo Partners & Fred R Cardoso Architect & Assoc., Miami, FL</div>
+              </li>
+            </ul>
+          </div>
 
+          {/* Education */}
+          <div className="education">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              Education
+            </h3>
+            <ul className="space-y-4 text-gray-700">
+              <li>
+                <div className="font-bold text-lg">Master of Architecture Candidate</div>
+                <div>Florida International University, Miami, FL</div>
+                <div>GPA: 3.6</div>
+              </li>
+              <li>
+                <div className="font-bold text-lg">Associate in Arts Degree – Pathway in Architecture</div>
+                <div>Miami Dade College, Miami, FL</div>
+              </li>
+              <li>
+                <div className="font-bold text-lg">Architecture Magnet</div>
+                <div>Design and Architecture Senior High School, Miami, FL</div>
+                <div>Ranked #16 in the U.S.</div>
+              </li>
+            </ul>
+          </div>
 
-      {/* Title */}
-      <div className="skills-title text-center mt-8 mb-8"> {/* Added top margin */}
-      <h2 className="skills-heading text-5xl font-extrabold text-black mb-4">Projects</h2>
-      <p className="skills-description text-black text-lg max-w-2xl mx-auto">
-        Swipe through to explore the carousel of skills in a 3D effect!
-      </p>
+          {/* Software Skills */}
+          <div className="software-skills">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              Software Skills
+            </h3>
+            <ul className="space-y-4 text-gray-700">
+              <li>
+                <span className="font-bold">CADD Software:</span> AutoCAD, Rhino 3D, Revit, SketchUp, Twinmotion
+              </li>
+              <li>
+                <span className="font-bold">Design Tools:</span> Illustrator, InDesign, Photoshop, Blue Beam Revu
+              </li>
+              <li>
+                <span className="font-bold">Technical Proficiencies:</span> Construction Documentation, 3D Rendering, Drafting
+              </li>
+              <li>
+                <span className="font-bold">Office Software:</span> Microsoft Office Suite
+              </li>
+            </ul>
+          </div>
+
+          {/* Awards */}
+          <div className="awards">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              Awards
+            </h3>
+            <ul className="space-y-4 text-gray-700">
+              <li>United Daughters of Confederacy Scholarship Recipient</li>
+              <li>De La Cruz Foundation Scholarship</li>
+              <li>Dean’s List Recipient (Fall 2019, Spring 2020, Fall 2020, Summer 2021)</li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-      {/* Center Image with Description and Link */}
-      <CenterImage
-        image={skills[currentIndex].img}
-        description={skills[currentIndex].description}
-        link="/" // Temporary link to the main page
-      />
-
-
-
-      {/* Swiper Carousel */}
-      <div className="skills-carousel w-full max-w-6xl mt-8 px-8">
-        <Swiper
-          aria-label="Skill Carousel"
-          modules={[Navigation, Autoplay, Pagination]}
-          loop={true}
-          centeredSlides={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          navigation={true}
-          spaceBetween={20}
-          slidesPerView={5}
-          className="skills-swiper h-[300px]"
-          onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex)} // Update current index
-        >
-          {skills.map((skill, index) => (
-            <SwiperSlide key={index} className="skills-slide custom-slide">
-              <div className="skills-image-container flex items-center justify-center h-full">
-                <img
-                  src={skill.img}
-                  alt={`Skill ${index}`}
-                  loading="lazy"
-                  className="skills-image rounded-lg w-[150px] h-[150px] object-cover"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      {/* CSS for Carousel */}
-      <style jsx>{`
-        .skills-section {
-          padding-top: 100px; /* Extra padding to account for the navbar */
-        }
-
-        .skills-swiper {
-          perspective: 1500px;
-        }
-
-        .skills-slide {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transform-origin: center;
-          transition: transform 0.6s ease, opacity 0.6s ease;
-        }
-
-        .skills-slide:not(.swiper-slide-active) {
-          transform: scale(0.8) translateZ(-50px);
-          opacity: 0.6;
-        }
-
-        .skills-slide.swiper-slide-next,
-        .skills-slide.swiper-slide-prev {
-          transform: scale(0.9) translateZ(0px);
-          opacity: 0.8;
-        }
-
-        .skills-slide.swiper-slide-active {
-          transform: scale(1) translateZ(50px);
-          opacity: 1;
-        }
-
-        .skills-image-container {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-        }
-
-        /* Adjust navigation button positioning */
-        .swiper-button-next,
-        .swiper-button-prev {
-          z-index: 10;
-          margin-top: -20px; /* Vertically center */
-        }
-
-        .swiper-button-next {
-          right: 20px; /* Add space to avoid overlap */
-        }
-
-        .swiper-button-prev {
-          left: 20px; /* Add space to avoid overlap */
-        }
-      `}</style>
     </section>
   );
 };
+
+export default Skills;

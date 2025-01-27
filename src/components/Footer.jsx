@@ -44,7 +44,7 @@ export const Footer = () => {
 
           {/* Footer Text */}
           <p className="text-white text-sm text-center md:text-right">
-            Production of Ken Lopez
+            Broken AI
           </p>
         </div>
       </div>
