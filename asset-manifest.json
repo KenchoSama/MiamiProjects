@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/MiamiProjects/static/css/main.6d541e77.css",
+    "main.js": "/MiamiProjects/static/js/main.17b2bbbe.js",
+    "static/js/453.9ae0e51d.chunk.js": "/MiamiProjects/static/js/453.9ae0e51d.chunk.js",
+    "static/media/Capture.PNG": "/MiamiProjects/static/media/Capture.096f63621ba780cbf709.PNG",
+    "static/media/banner-bg.jpg": "/MiamiProjects/static/media/banner-bg.a5f74fd1d9da296b7791.jpg",
+    "static/media/footer-bg.jpg": "/MiamiProjects/static/media/footer-bg.6e223cc02d45d81cf3b6.jpg",
+    "static/media/CentraNo2-Bold.ttf": "/MiamiProjects/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/MiamiProjects/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/CentraNo2-Book.ttf": "/MiamiProjects/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/nav-icon3.svg": "/MiamiProjects/static/media/nav-icon3.cd232979a7cbf83fbe7070526869e62c.svg",
+    "static/media/nav-icon2.svg": "/MiamiProjects/static/media/nav-icon2.cbd44c6b10b24faa22f1045865368dc0.svg",
+    "static/media/nav-icon1.svg": "/MiamiProjects/static/media/nav-icon1.a63c9476fa83b33ffc32894544c5ccb7.svg",
+    "index.html": "/MiamiProjects/index.html",
+    "main.6d541e77.css.map": "/MiamiProjects/static/css/main.6d541e77.css.map",
+    "main.17b2bbbe.js.map": "/MiamiProjects/static/js/main.17b2bbbe.js.map",
+    "453.9ae0e51d.chunk.js.map": "/MiamiProjects/static/js/453.9ae0e51d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d541e77.css",
+    "static/js/main.17b2bbbe.js"
+  ]
+}
